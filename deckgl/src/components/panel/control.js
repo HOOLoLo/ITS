@@ -65,22 +65,6 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-
-
-// export class Panel extends Component{
-//
-//     constructor(props){
-//         super(props)
-//         keys=setK()
-//
-// }
-//
-// render() {
-//
-// }
-//
-//
-// }
 let p=setK();
 let p2=readipData()
 export function Panel() {
@@ -171,11 +155,15 @@ export function Panel() {
     }
 
     function updateService() {
-        // const http=new XMLHttpRequest();
-        const url=ip[ipValue]+'/cmd/';
-        $.post(url,"copy file////Mypassport/Storage/content.csv . /Y",text)
-        // http.open('GET',url);
-        // http.send()
+        let message=window.confirm('确定更新'+ipValue+'服务吗？')
+        if(message===true){
+            const http=new XMLHttpRequest();
+            const url=ip[ipValue]+'/update';
+            // $.post(url,"copy file////Mypassport/Storage/content.csv . /Y",text)
+            http.open('GET',url);
+            http.send()
+        }
+        else return
     }
 
     // if(!keys){
