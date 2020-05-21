@@ -12,6 +12,7 @@ import FormControl from "@material-ui/core/FormControl";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import FormLabel from "@material-ui/core/FormLabel";
+import Chip from '@material-ui/core/Chip';
 import {text} from "d3-request";
 import $ from "jquery"
 // let keys=[];
@@ -36,7 +37,7 @@ function readipData(){
 
 function setK() {
     return new Promise(resolve => {
-        d3.csv('https://raw.githubusercontent.com/HOOLoLo/webserver/master/content.csv').then(d=>{
+        d3.csv('content.csv').then(d=>{
             d.map(x=>{
                 content[x['name']]=x['path']
             })
@@ -207,7 +208,14 @@ export function Panel() {
                         keys.map((value,index)=>{
                             console.log('d',value);
                             return(
-                                <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
+                                <div>
+                                    {index===0&&<Chip color="primary" size="small"  label={'拼接屏内容'}/>}
+                                    {index===5&&<Chip color="primary" size="small"  label={'融合内容'}/>}
+                                    {index===12&&<Chip color="primary" size="small"  label={'玻璃内容'}/>}
+                                    {index===16&&<Chip color="primary" size="small"  label={'窗户'}/>}
+                                    <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
+                                </div>
+
                             )
                         })
                     }
@@ -259,7 +267,11 @@ export function Panel() {
                     ipName.map((value,index)=>{
                         console.log('d',value);
                         return(
-                            <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
+
+
+                                <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
+
+
                         )
                     })
                 }
