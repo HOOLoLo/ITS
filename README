@@ -6,4 +6,6 @@ set FLASK_APP=main.py
 flask run
 
 前端运行命令：
-yarn start
+先npm install 安装需要的包
+
+然后yarn start启动
