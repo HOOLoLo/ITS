@@ -13,17 +13,30 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import FormLabel from "@material-ui/core/FormLabel";
 import Chip from '@material-ui/core/Chip';
+import TextField from '@material-ui/core/TextField';
 import {text} from "d3-request";
 import $ from "jquery"
 // let keys=[];
 let ip={}
 let content={}
+// const { exec } = require('child_process');
+// // 输出当前目录（不一定是代码所在的目录）下的文件和文件夹
+// exec('ls -l', (err, stdout, stderr) => {
+//     if(err) {
+//         console.log(err);
+//         return;
+//     }
+//     console.log(`stdout: ${stdout}`);
+//     console.log(`stderr: ${stderr}`);
+// })
+
 //读取ip地址
 function readipData(){
 
     return new Promise(resolve => {
-        d3.csv('https://raw.githubusercontent.com/HOOLoLo/ITS/master/deckgl/public/panel.csv').then(d=>{
-            d.map(x=>{
+        // d3.csv('https://raw.githubusercontent.com/HOOLoLo/ITS/master/deckgl/public/panel.csv').then(d=>{
+        d3.csv('panel.csv').then(d=>{
+                d.map(x=>{
                 ip[x['no']]=x['ip']
             })
             let name=Object.keys(ip);
@@ -101,9 +114,7 @@ export function Panel() {
     function send(event) {
 
         console.log(event.currentTarget)
-
         const http=new XMLHttpRequest();
-
         const url=ip[event.currentTarget.value]+'/url/'+value;
         console.log(url)
         http.open('GET',url)
@@ -167,6 +178,41 @@ export function Panel() {
         else return
     }
 
+    function updateMain(){
+        let message=window.confirm('确定更新'+ipValue+'服务吗？')
+        if(message===true){
+            const http=new XMLHttpRequest();
+            const url='http://192.168.0.161:5556'+'/updateMain';
+            // $.post(url,"copy file////Mypassport/Storage/content.csv . /Y",text)
+            http.open('GET',url);
+            http.send()
+        }
+        else return
+    }
+
+    function openPotPlayer(){
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/openPotPlayer/'+document.getElementById('videoname').value;
+        http.open('GET',url);
+        http.send()
+    }
+
+    function closePotPlayer() {
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/closePotPlayer';
+        http.open('GET',url);
+        http.send()
+    }
+
+    // function sendCommand(){
+    //     if(message===true){
+    //         const http=new XMLHttpRequest();
+    //         const url=ip[ipValue]+'/cmd';
+    //         $.post(url,"copy file////Mypassport/Storage/360video . /Y",text)
+    //         http.open('GET',url);
+    //         http.send()
+    //     }
+    // }
     // if(!keys){
     //     console.log('keys')
     //     return <div>wait</div>
@@ -267,10 +313,7 @@ export function Panel() {
                     ipName.map((value,index)=>{
                         console.log('d',value);
                         return(
-
-
                                 <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
-
 
                         )
                     })
@@ -291,7 +334,14 @@ export function Panel() {
                 <div className={classes.root}>
                     <Button variant="contained" color="secondary" onClick={updateService}> 更新服务</Button>
                 </div>
-
+                <div className={classes.root}>
+                    <Button variant="contained" color="secondary" onClick={updateMain}> 从git上更新主服务</Button>
+                </div>
+                <div className={classes.root}>
+                    <TextField id="videoname" label="输入视频名称" variant="outlined"/>
+                    <Button variant="contained" color="secondary" onClick={openPotPlayer}> 打开全景视频</Button>
+                    <Button variant="contained" color="secondary" onClick={closePotPlayer}> 关闭全景视频</Button>
+                </div>
             </FormControl>
 
         );
