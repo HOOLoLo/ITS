@@ -191,28 +191,46 @@ export function Panel() {
     }
 
     function openPotPlayer(){
-        const http=new XMLHttpRequest();
-        const url=ip[ipValue]+'/openPotPlayer/'+document.getElementById('videoname').value;
-        http.open('GET',url);
-        http.send()
+        for(let prop in ip){
+            if(ip[prop]){
+                console.log(ip[prop])
+                const http=new XMLHttpRequest();
+                const url=ip[prop]+'/openPotPlayer/'+document.getElementById('videoname').value;
+                http.open('GET',url);
+                http.send()
+            }
+        }
     }
-
     function closePotPlayer() {
+        for(let prop in ip){
+            if(ip[prop]){
+                console.log(ip[prop])
+                const http=new XMLHttpRequest();
+                const url=ip[prop]+'/closePotPlayer';
+                http.open('GET',url);
+                http.send()
+            }
+        }
+    }
+    //全景视频使用
+    function dragLeft(){
         const http=new XMLHttpRequest();
-        const url=ip[ipValue]+'/closePotPlayer';
+        const url=ip[ipValue]+'/dragLeft/'+document.getElementById('leftPix').value;
         http.open('GET',url);
         http.send()
     }
 
-    // function sendCommand(){
-    //     if(message===true){
-    //         const http=new XMLHttpRequest();
-    //         const url=ip[ipValue]+'/cmd';
-    //         $.post(url,"copy file////Mypassport/Storage/360video . /Y",text)
-    //         http.open('GET',url);
-    //         http.send()
-    //     }
-    // }
+    function dragRight() {
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/dragLeft/'+document.getElementById('rightPix').value;
+        http.open('GET',url);
+        http.send();
+    }
+    function sendCommand(){
+            const url=ip[ipValue]+'/cmd';
+            $.post(url,{cmd:document.getElementById('command').value})
+
+    }
     // if(!keys){
     //     console.log('keys')
     //     return <div>wait</div>
@@ -230,6 +248,37 @@ export function Panel() {
     //     http.open('GET',url);
     //     http.send()
     // }
+
+
+    function adjustAllvideo(){
+        let list=[10,10,10,10,10,10,10]
+        ip.map((i,v)=>{
+            const http=new XMLHttpRequest();
+            //用正负来区分左右把不要单独了
+            const url=ip[i]+'/dragLeft/'+list[i];
+            http.open('GET',url);
+            http.send()
+        })
+    }
+    function flip(){
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/flip';
+        http.open('GET',url);
+        http.send()
+    }
+
+    function sendDownload(){
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/download/'+document.getElementById('downloadfile').value;
+        http.open('GET',url);
+        http.send()
+    }
+    function closePreview() {
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/closepreview';
+        http.open('GET',url);
+        http.send()
+    }
 
     return (
             <FormControl component="fieldset">
@@ -338,12 +387,28 @@ export function Panel() {
                     <Button variant="contained" color="secondary" onClick={updateMain}> 从git上更新主服务</Button>
                 </div>
                 <div className={classes.root}>
-                    <TextField id="videoname" label="输入视频名称" variant="outlined"/>
+                    <TextField id="videoname" label="输入视频名称" variant="outlined" defaultValue="vr.webm"/>
                     <Button variant="contained" color="secondary" onClick={openPotPlayer}> 打开全景视频</Button>
                     <Button variant="contained" color="secondary" onClick={closePotPlayer}> 关闭全景视频</Button>
+                    <Button variant="contained" color="secondary" onClick={closePreview}> 关闭预览</Button>
+
+                </div>
+                <div className={classes.root}>
+                    <TextField id="leftPix" label="输入距离" variant="outlined" defaultValue={'50'}/>
+                    <Button variant="contained" color="secondary" onClick={dragLeft}> 向左调整</Button>
+                    <TextField id="rightPix" label="输入距离" variant="outlined" defaultValue={'50'}/>
+                    <Button variant="contained" color="secondary" onClick={dragRight}> 向右调整</Button>
+                    <Button variant="contained" color="secondary" onClick={flip}> 视频左右翻转</Button>
+                </div>
+                <div className={classes.root}>
+                    <TextField id="command" label="输入指令" variant="outlined" defaultValue={"copy file////Mypassport/Storage/360video . /Y"}/>
+                    <Button variant="contained" color="secondary" onClick={sendCommand}> 发送指令</Button>
+                </div>
+                <div className={classes.root}>
+                    <TextField id="downloadfile" label="文件名" variant="outlined" defaultValue={"vr.webm"}/>
+                    <Button variant="contained" color="secondary" onClick={sendDownload}> 下载文件</Button>
                 </div>
             </FormControl>
-
         );
 
 

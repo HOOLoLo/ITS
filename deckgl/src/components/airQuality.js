@@ -110,8 +110,7 @@ const material = {
 const INITIAL_VIEW_STATE = {
     longitude:  120.207057,
     latitude: 30.225901,
-    // longitude:-74.00823,
-    // latitude: 40.71351,
+
     zoom: 3,
     pitch: 45,
     bearing: 0
@@ -273,25 +272,6 @@ export default class AirQuality extends Component {
                                         label:{label:parems.option.label,id:parems.option.id}
                                     })
 
-                                    // if(parems.option.id=='pm10'){
-                                    //     this.setState({
-                                    //         data:qualityMap.get()
-                                    //         label:{label:"pm10",id:'pm10'}
-                                    //     })
-                                    // }
-                                    // else if(parems.option.id=='pm25'){
-                                    //     this.setState({
-                                    //
-                                    //         label:{label:"pm25",id:'pm25'}
-                                    //     })
-                                    // }
-                                    // else{
-                                    //     this.setState({
-                                    //         desV:false,
-                                    //         depV:false,
-                                    //         area:{ label: "隐藏", id: "" }
-                                    //     })
-                                    // }
                                 }}
                             />
                         </SelectContainer>

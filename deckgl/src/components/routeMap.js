@@ -769,6 +769,7 @@ function getBlockData(){
         console.log(blockData)
     })
 }
+
 function getBlockRoute(){
     return new Promise(resolve => {
         d3.csv('./blockdetect/GPS_588_merge.csv').then(d=>{
