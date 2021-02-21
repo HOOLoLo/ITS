@@ -5,6 +5,14 @@
       <webServer id="535e721c-3647-4c21-a28d-b2466fa08e01" name="ITS" url="http://192.168.0.120:5000">
         <fileTransfer port="0" mountedRoot="D:\Desktop" accessType="MOUNT" />
       </webServer>
+      <webServer id="50e7cd50-5904-41b3-9184-0871f6132e02" name="6号机" url="http://10.72.100.6">
+        <fileTransfer host="10.72.100.6" port="10022" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="10022" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

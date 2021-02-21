@@ -3,6 +3,9 @@
   <component name="SshConfigs">
     <configs>
       <sshConfig authType="PASSWORD" host="10.72.100.6" id="73f9043d-59cc-4681-bc76-31b030cdbd36" port="10022" customName="6号机" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.72.100.6" id="58e86a40-19a6-49d2-aeba-b54a9e4467e6" port="10022" customName="6号机" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.72.100.6" id="41f6291e-d111-4ba4-93ec-f245278560c0" port="10022" customName="6号机" nameFormat="CUSTOM" />
+      <sshConfig authType="PASSWORD" host="10.72.100.6" id="e3b9555b-7b2d-465f-9fbe-f7cf86c4c954" port="10022" customName="6号机" nameFormat="CUSTOM" />
     </configs>
   </component>
 </project>

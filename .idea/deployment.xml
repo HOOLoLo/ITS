@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="ITS">
+  <component name="PublishConfigData">
     <serverData>
+      <paths name="6号机">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/zhiguangda/ITS" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ITS">
         <serverdata>
           <mappings>
