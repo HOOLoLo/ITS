@@ -1,4 +1,4 @@
-import * as d3 from 'd3'
+
 import React, {Component} from "react";
 
 const width = 4500;
@@ -11,30 +11,14 @@ export default class App extends Component{
 
     constructor(props) {
         super(props);
-
     }
 
     componentDidMount() {
-        const svg=d3.select('svg')
-        let g1=svg.append('g')
-
-        g1.selectAll('circle')
-            .data(circle)
-            .join('circle')
-            .attr('cx',0)
-            .attr('cy',960)
-
-
-
     }
 
     render() {
 
-        return <svg height={height} width={width}>
-
-
-        </svg>
-
+        return <video src="/content/workflow/conclusion.mp4" autoPlay muted loop id="video"/>
 
     }
 

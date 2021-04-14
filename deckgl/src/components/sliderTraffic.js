@@ -33,9 +33,10 @@ const Container = styled('div', {
 });
 
 const ThumbValue = styled('div', {
-    color: '#00FFFF',
+    color: '#FF0000',
     position: 'absolute',
-    top: '-2em'
+    top: '-2em',
+    width: '200px'
 });
 
 const TickBar = styled('div', {
@@ -44,7 +45,13 @@ const TickBar = styled('div', {
     maxWidth: '80vw'
 });
 
-const ANIMATION_SPEED = 2;
+
+
+
+
+
+
+const ANIMATION_SPEED = 1;
 
 export default class sliderTraffic extends PureComponent {
     constructor(props) {
@@ -88,19 +95,18 @@ export default class sliderTraffic extends PureComponent {
     }
 
     _renderThumbValue({$thumbIndex, $value}) {
-        //console.log('$thumbIndex:',$thumbIndex);
+
         if($thumbIndex==1){
             const value = $value[$thumbIndex];
             if(value==3600){
                 console.log('thumb==3600')
             }
            // console.log('thumb:',value)
-            return <ThumbValue Color={[0,0,0,255]}>{this.props.formatLabel(value)}</ThumbValue>;
+            return <ThumbValue Color={[0,0,0,255]} >{this.props.formatLabel(value)}</ThumbValue>;
         }
         else{
             return <ThumbValue></ThumbValue>
         }
-
         // return <ThumbValue>{0}</ThumbValue>;
     }
 
@@ -123,7 +129,6 @@ export default class sliderTraffic extends PureComponent {
         }
 
         return (
-
                     <Container>
                         <Button
                             id={'start'}
@@ -141,9 +146,8 @@ export default class sliderTraffic extends PureComponent {
                                 TickBar: () => <TickBar />
                             }}
                         />
+
                     </Container>
-
-
 
         );
     }

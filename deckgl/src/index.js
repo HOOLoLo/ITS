@@ -2,22 +2,25 @@ import React,{Fragment}from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route,  Switch,Link } from 'react-router-dom'
 
-import {City} from './components/city/city'
+import {City} from './components/city/city';
 import RouteMap from "./components/routeMap";
-import Covid from "./components/covid-19"
+import Covid from "./components/covid-19";
 import AirQuality from "./components/airQuality";
 import {StreamG} from "./components/streamgraph/main";
 import {BarG} from "./components/Barchart/main";
-
 import {Panel} from "./components/panel/control";
-
+import {App} from "./components/test/selectionlayer";
 import LineChart from "./components/lineChart/main";
-import './index.css'
+import './index.css';
+import Ad from "./components/sliderexample"
+import News from "./components/WorkFlow/news"
+import Welcome from "./components/front_glass/welcome"
+
 const map = document.getElementById("map");
 function Getpage(){
     return (
         <Router>
-            <Switch>
+            <Route>
                 <Route exact path="/">
                     <RouteMap />
                 </Route>
@@ -36,20 +39,30 @@ function Getpage(){
                 <Route path="/bar">
                     <BarG />
                 </Route>
-                <Route path="/line">
-                    {/*<div className={'covid19'}>*/}
-                        <ul >
-                        <li><video src={'./covid.mp4'} autoPlay={'true'} style={{width:'100%'}}/></li>
-                        {/*<li><LineChart /></li>*/}
-                        </ul>
-                    {/*</div>*/}
-
+                <Route path="/select">
+                    <App/>
                 </Route>
                 <Route path="/control">
                     <Panel/>
                 </Route>
-            </Switch>
+                <Route path={"/slider"}>
+                    <Ad/>
+                </Route>
+                <Route path={"/news"}>
+                    <News/>
+                </Route>
+                <Route path={"/news"}>
+                    <News/>
+                </Route>
+                <Route path={"/welcome"}>
+                    <Welcome/>
+                </Route>
+            </Route>
+
         </Router>
+
+
+
     )
 }
 
@@ -64,7 +77,6 @@ function Getpage(){
 ReactDOM.render(
     <Getpage />,
     map
-
 )
 
 // ReactDOM.render(

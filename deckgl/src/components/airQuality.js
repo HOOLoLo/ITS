@@ -266,7 +266,6 @@ export default class AirQuality extends Component {
                                 size={SIZE.mini}
                                 clearable={true}
                                 onChange={parems=> {
-
                                     this.setState({
                                         data:qualityMap.get(parems.option.id),
                                         label:{label:parems.option.label,id:parems.option.id}

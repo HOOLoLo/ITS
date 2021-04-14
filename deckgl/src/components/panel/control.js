@@ -280,6 +280,12 @@ export function Panel() {
         http.send()
     }
 
+    function openEdge(){
+        const http=new XMLHttpRequest();
+        const url=ip[ipValue]+'/openEdge';
+        http.open('GET',url);
+        http.send()
+    }
     return (
             <FormControl component="fieldset">
                 <FormLabel component="legend">Content</FormLabel>
@@ -379,6 +385,7 @@ export function Panel() {
                 <div className={classes.root}>
                     <Button variant="contained" color="secondary" onClick={sendOpenChrome}> 打开浏览器</Button>
                     <Button variant="contained" color="secondary"  onClick={shutdown}> 关机</Button>
+                    <Button variant="contained" color="secondary" onClick={openEdge}>打开Edge浏览器</Button>
                 </div>
                 <div className={classes.root}>
                     <Button variant="contained" color="secondary" onClick={updateService}> 更新服务</Button>

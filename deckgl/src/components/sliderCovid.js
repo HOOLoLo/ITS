@@ -10,7 +10,6 @@ import Stop from 'baseui/icon/delete';
 
 const engine = new Styletron();
 
-
 const ButtonContainer=styled('div',{
     position: 'absolute',
     display: 'flex',
@@ -43,7 +42,7 @@ const TickBar = styled('div', {
     maxWidth: '80vw'
 });
 
-const ANIMATION_SPEED = 2;
+const ANIMATION_SPEED = 1;
 let count=0;
 
 export default class sliderCovid extends PureComponent {

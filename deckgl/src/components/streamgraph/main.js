@@ -73,11 +73,6 @@ export function StreamG(){
 
 
 
-
-
-
-
-
     return <div className={'stream'} >
         <svg height={height} width={width} >
             <g transform={`translate(${margin.left},${margin.top})`}>

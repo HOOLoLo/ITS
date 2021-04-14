@@ -24,7 +24,7 @@ const yScale = d3.scaleLinear()
     .range([innerHeight, 0]);
 const yAxisGenerator = d3.axisLeft()
     // .tickValues(d3.range(0, 3, 5));
-    let xdomain=[new Date(2020, 0, 22), new Date(2020, 4, 1)];
+    let xdomain=[new Date(2020, 0, 22), new Date()];
     let xScale=d3.scaleTime()
         .domain(xdomain)
         .range([0, innerWidth]);
