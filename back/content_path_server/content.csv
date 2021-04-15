@@ -11,9 +11,9 @@ ITS(融合2),http://10.72.100.6:5555
 Kmeans,file:///C:/Users/keshihua/Desktop/Kmeans/index_three.html
 介绍流程白色,file:///C:/Users/keshihua/Desktop/流程/介绍流程2.html
 NASA,file:///C:/Users/keshihua/Desktop/NASA/NASA.html
-海报,file://mypassport/Storage/cityhappiness/workflow/海报/1.html
-welcome,http://10.72.100.6:5555/
-welcome2,file://mypassport/Storage/welcome/welcome2.html
+海报,http://10.72.100.6:5555/wallpaper
+welcome,http://10.72.100.6:5555/welcome
+welcome2,http://10.72.100.6:5555/welcome2
 介绍流程黑色,file://mypassport/Storage/融合/介绍流程.html
 窗户内容,file:///D:\窗户\Historical-ranking-data-visualization-based-on-d3.js-master\src\bargraph.html
 河流图,http://192.168.0.161:5555/stream
