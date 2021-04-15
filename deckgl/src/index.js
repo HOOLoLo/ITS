@@ -9,7 +9,6 @@ import AirQuality from "./components/airQuality";
 import {StreamG} from "./components/streamgraph/main";
 import {BarG} from "./components/Barchart/main";
 import {Panel} from "./components/panel/control";
-import {App} from "./components/test/selectionlayer";
 import LineChart from "./components/lineChart/main";
 import './index.css';
 import Ad from "./components/sliderexample"
@@ -38,9 +37,6 @@ function Getpage(){
                 </Route>
                 <Route path="/bar">
                     <BarG />
-                </Route>
-                <Route path="/select">
-                    <App/>
                 </Route>
                 <Route path="/control">
                     <Panel/>
