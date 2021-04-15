@@ -10,8 +10,6 @@ app= Flask(__name__)
 CORS(app, supports_credentials=True)
 dic={}
 
-
-
 try:
     csv_data = pd.read_csv('content.csv')
     # csv_data=pd.read_csv('../content.csv')

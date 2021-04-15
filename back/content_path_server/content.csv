@@ -4,11 +4,6 @@ ML,file://mypassport/Storage/cityhappiness/workflow/ML.html
 DTW,file://mypassport/Storage/cityhappiness/workflow/DTW.html
 news,file://mypassport/Storage/cityhappiness/workflow/news.html
 conclustion,file://mypassport/Storage/cityhappiness/workflow/Conclusion.html
-交通1号,file:///C:/Users/zhigu/Desktop/transportlab/1.html
-交通2号,file:///C:/Users/zhigu/Desktop/transportlab/2.html
-交通3号,file:///C:/Users/zhigu/Desktop/transportlab/3.html
-交通4号,file:///C:/Users/wc/Desktop/transportlab/4.html
-交通5号,file:///C:/Users/zhigu/Desktop/transportlab/5.html
 音乐,file:///C:/Users/keshihua/Desktop/musicBar/bar3d-music-visualization.html
 ITS(融合2),http://10.72.100.6:5555
 疫情静态(融合3),http://cov.aiiyx.cn/
@@ -17,14 +12,18 @@ Kmeans,file:///C:/Users/keshihua/Desktop/Kmeans/index_three.html
 介绍流程白色,file:///C:/Users/keshihua/Desktop/流程/介绍流程2.html
 NASA,file:///C:/Users/keshihua/Desktop/NASA/NASA.html
 海报,file://mypassport/Storage/cityhappiness/workflow/海报/1.html
-welcome,file://mypassport/Storage/welcome/welcome.html
+welcome,http://10.72.100.6:5555/
 welcome2,file://mypassport/Storage/welcome/welcome2.html
 介绍流程黑色,file://mypassport/Storage/融合/介绍流程.html
-窗户内容,file:///C:/Users/zhigu/Desktop/窗户/窗户.html
+窗户内容,file:///D:\窗户\Historical-ranking-data-visualization-based-on-d3.js-master\src\bargraph.html
 河流图,http://192.168.0.161:5555/stream
 气泡图,http://192.168.0.161:5555/city
 直方图,http://192.168.0.161:5555/bar
 openMusic,file:///C:/Users/keshihua/Desktop/backMusic/backgroundmusic.html
 stopMusic,none
 古典视频v, file://mypassport/Storage/古风音乐/古典视频.html
-
+交通1号,file:///C:/Users/zhigu/Desktop/transportlab/1号.html
+交通2号,file:///C:/Users/zhigu/Desktop/transportlab/2号.html
+交通3号,file:///C:/Users/zhigu/Desktop/transportlab/3号.html
+交通4号,file:///C:/Users/wc/Desktop/transportlab/4号.html
+交通5号,file:///C:/Users/zhigu/Desktop/transportlab/5号.html

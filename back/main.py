@@ -36,8 +36,6 @@ def get_pos_map():
         line = link_file.readline()
     return result
 
-
-
 def read_road_network():
     road_file=open('road_network_sub-dataset.v2','r')
     pos_map=get_pos_map()
@@ -66,7 +64,6 @@ def read_road_network():
     return road_data
 
 read_road_network()
-
 
 @app.route('/pos_map')
 def get_pos():
