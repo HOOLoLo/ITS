@@ -28,9 +28,10 @@ export default class App extends Component{
             '        overflow-x:hidden\n' +
             '    }\n' +
             '    li video{\n' +
-            '        width: 100%;\n' +
-            '        height: 100%;\n' +
+            '        width: 4096px;\n' +
+            '        height: 768px;\n' +
             '        overflow-x:hidden\n' +
+            '        object-fit: fill\n '  +
             '    }\n' +
             '    ul{\n' +
             '        margin:0;padding:0;\n' +
