@@ -17,6 +17,7 @@ import Welcome from "./components/front_glass/welcome"
 import Wallpaper from "./components/front_glass/wallpaper.js"
 
 const map = document.getElementById("map");
+
 function Getpage(){
     return (
         <Router>
@@ -58,11 +59,7 @@ function Getpage(){
                     <Wallpaper/>
                 </Route>
             </Route>
-
         </Router>
-
-
-
     )
 }
 
