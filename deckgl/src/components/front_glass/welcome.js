@@ -28,14 +28,14 @@ export default class App extends Component{
             '        overflow-x:hidden\n' +
             '    }\n' +
             '    li video{\n' +
-            '        width: 4096px;\n' +
-            '        height: 768px;\n' +
+            '        width: 5670px;\n' +
+            '        height: 1080px;\n' +
             '        overflow-x:hidden;\n' +
             '        object-fit: fill;\n '  +
             '    }\n' +
             '    ul{\n' +
             '        margin:0;padding:0;\n' +
-            '        overflow-x:hidden\n' +
+            '        overflow-x:hidden;\n' +
             '    } '
         loadStyle(code);
         var speed = 0.5;//设置速度
