@@ -15,6 +15,7 @@ import Ad from "./components/sliderexample"
 import News from "./components/WorkFlow/news"
 import Welcome from "./components/front_glass/welcome"
 import Wallpaper from "./components/front_glass/wallpaper.js"
+import Mirror from "./components/magicmirror/Mirror"
 
 const map = document.getElementById("map");
 
@@ -57,6 +58,9 @@ function Getpage(){
                 </Route>
                 <Route path={"/wallpaper"}>
                     <Wallpaper/>
+                </Route>
+                <Route path="/magicmirror">
+                    <Mirror/>
                 </Route>
             </Route>
         </Router>
