@@ -28,7 +28,7 @@ export default class App extends Component{
             '        overflow-x:hidden\n' +
             '    }\n' +
             '    li video{\n' +
-            '        width: 100%;\n' +
+            '        width: 70%;\n' +
             '        height: 100%;\n' +
             '        overflow-x:hidden\n' +
             '    }\n' +
@@ -45,7 +45,7 @@ export default class App extends Component{
 
     render() {
 
-        return <ul style={{overflow:"hidden",clear:"both;"}}>
+        return <ul style={{overflow:"hidden",clear:"both"}}>
                 <li>
                     <video src="content/welcome/welcome.mp4" autoPlay muted="muted" loop="loop" id='video'></video>
                 </li>
