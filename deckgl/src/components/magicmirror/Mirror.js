@@ -3,7 +3,6 @@ import 'antd/dist/antd.css';
 import Clock from './Clock'
 import Navi from './Navi'
 import Weather from './Weather'
-import './Mirror.css'
 
 class Mirror extends React.Component {
   
