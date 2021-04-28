@@ -65,7 +65,7 @@ export default class Appo extends React.Component {
         if(localStorage.getItem("list")!=null){
             listData = JSON.parse(localStorage.getItem("list"))
         }else{
-            localStorage.setItem("listName",JSON.stringify(listData))
+            localStorage.setItem("list",JSON.stringify(listData))
         }
     }
       
@@ -95,12 +95,37 @@ export default class Appo extends React.Component {
 
         return(
             <div>
-                <div className='t1'>实验室预约日历</div>
-                <div className='cal'>
+                <div style={{
+                    position: 'absolute',
+                    top: '400px',
+                    left: '370px',
+                    width: '1500px',
+                    'line-height': '2em',
+                    'font-size': '7em',
+                }}>实验室预约日历</div>
+                <div style={{
+                    position: 'absolute',
+                    top: '800px',
+                    left: '-50px',
+                    width: '1600px',
+                    height: '1000px',
+                }}>
                     <Calendar dateCellRender={dateCellRender} monthCellRender={monthCellRender} />
                 </div>
-                <div className='t2'>请选择预约时间及事项</div>
-                <div className='date'>
+                <div style={{
+                    position: 'absolute',
+                    top: '1800px',
+                    left: '360px',
+                    width: '1500px',
+                    'line-height': '2em',
+                    'font-size': '5em',
+                    'font-weight': 400,
+                }}>请选择预约时间及事项</div>
+                <div style = {{
+                    position: 'absolute',
+                    top: '2000px',
+                    left: '150px',
+                }}>
                     <DatePicker 
                         onChange={onChange_date}
                         style={{
@@ -109,13 +134,21 @@ export default class Appo extends React.Component {
                         }} 
                     />
                 </div>
-                <div className='timepicker'>
+                <div style = {{
+                    position: 'absolute',
+                    top: '2000px',
+                    left: '450px',
+                    }}>
                     <TimePicker.RangePicker onChange={onChange_time} style={{
                             height:'40px',
                             width:'400px'
                         }} />
                 </div>
-                <div className='reason'>
+                <div style = {{
+                    position: 'absolute',
+                    top: '2000px',
+                    left: '950px',
+                    }}>
                     <Select  placeholder="请选择预约事项"  style={{ width: '200px'}}  size='large'  onChange={handleChange}>
                         <Option value="自行参观">自行参观</Option>
                         <Option value="交流学习">交流学习</Option>
@@ -123,7 +156,12 @@ export default class Appo extends React.Component {
                         <Option value="其他">其他</Option>
                     </Select>
                 </div>
-                <div className='appo'>
+                <div style = {{
+                    position: 'absolute',
+                    top: '2000px',
+                    left: '1250px',
+                    'font-weight': 350,
+                    }}>
                     <Button type="primary" size='large' onClick={this.onBtClick}> 提交预约</Button>
                 </div>
                 
