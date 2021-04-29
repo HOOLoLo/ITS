@@ -29,7 +29,9 @@ export default class Navi extends React.Component {
     changeStyle = function (elem, name, value) {
         elem.style[name] = value;
     }
+
     handleClick = e => {
+        console.log('点击事件', 1)
         this.setState({
             key: e.key
         })
@@ -37,8 +39,17 @@ export default class Navi extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className='navi'>
+            <div style={{
+                position: 'absolute',
+                top: '300px',
+                left: '20px',
+                width: '100%'
+            }}>
+                <div style={{
+                    position: 'absolute',
+                    top: '20px',
+                    left: '20px',
+                    }}>
                     {/* <Button type="primary" onClick={this.toggleCollapsed} size='large' style={{ marginBottom: 16 }}>
                         {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
                     </Button> */}
@@ -61,7 +72,12 @@ export default class Navi extends React.Component {
                     </Menu>
                 </div>
 
-                <div className='box'>
+                <div style = {{
+                    position: 'absolute',
+                    top: '300px',
+                    left: '300px',
+                    width: '800px',
+                }}>
                     {
                         this.state.key == 1?
                             (<div className='b1'> 
@@ -73,7 +89,11 @@ export default class Navi extends React.Component {
                                     <Appo />
                                 </div>)
                                 :
-                                (<div className='b3'>
+                                (<div style={{
+                                    position: 'absolute',
+                                    top: '40px',
+                                    left: '280px'
+                                }}>
                                     <Panel />
                                 </div>)
                     }

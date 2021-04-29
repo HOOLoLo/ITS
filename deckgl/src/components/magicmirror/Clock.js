@@ -3,7 +3,12 @@ import moment from 'moment';
 import { Row } from 'antd';
 
 const styles = {
-    container: {},
+
+    container: {
+      position: 'absolute',
+      top: '50px',
+      left: '50px'
+    },
     clock: {
       color: 'white',
       fontSize: '8.3em',
