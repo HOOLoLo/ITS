@@ -25,7 +25,6 @@ def get_pos():
 
 if __name__=='__main__':
     hostname = socket.gethostname()
-    # 获取本机IP1111
     ip = socket.gethostbyname(hostname)
     print(ip)
     app.run(host="10.72.100.6",port=8887,debug=False)

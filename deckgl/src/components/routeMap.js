@@ -216,7 +216,7 @@ const DEFAULT_THEME = {
     material,
     effects: [lightingEffect]
 };
-const INITIAL_VIEW_STATE = {
+const HANG_ZHOU_VIEW_STATE = {
     longitude:  120.207057,
     latitude: 30.225901,
     // longitude:-74.00823,
