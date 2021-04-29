@@ -311,9 +311,9 @@ export function Panel() {
                             return(
                                 <div>
                                     {index===0&&<Chip color="primary" size="small"  label={'拼接屏内容'}/>}
-                                    {index===5&&<Chip color="primary" size="small"  label={'融合内容'}/>}
-                                    {index===14&&<Chip color="primary" size="small"  label={'玻璃内容'}/>}
-                                    {index===18&&<Chip color="primary" size="small"  label={'窗户'}/>}
+                                    {index===10&&<Chip color="primary" size="small"  label={'融合内容'}/>}
+                                    {index===19&&<Chip color="primary" size="small"  label={'玻璃内容'}/>}
+                                    {index===24&&<Chip color="primary" size="small"  label={'窗户'}/>}
                                     <FormControlLabel key={index} value={value} control={<Radio />} label={value}  />
                                 </div>
 
